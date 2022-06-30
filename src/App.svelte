@@ -1,31 +1,28 @@
-<script lang="coffee">
-  import { Router, Route } from 'svelte-navigator'
+<script>
+  import { Router, Route } from 'svelte-navigator';
 
-  import Header from './components/Header.svelte'
-  import Footer from './components/Footer.svelte'
+  import Header from './components/Header.svelte';
+  import Footer from './components/Footer.svelte';
 
-  import Home from './routes/Home.svelte'
-  import About from './routes/About.svelte'
+  import Home from './routes/Home.svelte';
+  import About from './routes/About.svelte';
 </script>
 
 <Router>
   <Header />
 
-  <main>
-    <Route path="/">
-      <Home />
-    </Route>
+  <div class="main-content">
+    <Route path="/" component={Home} />
 
     <Route path="about" component={About} />
-  </main>
+  </div>
   <Footer />
 </Router>
 
 <style lang="scss">
-  main {
+  // Global styles shall be written in css/globals/FILE_NAME.scss
+  @use 'scss/global.scss';
+  .main-content {
     width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 1024px;
   }
 </style>

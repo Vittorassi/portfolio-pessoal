@@ -3,7 +3,7 @@
 
 
 <footer>
-  <p>Rodapé do projeto</p>
+  <p class="footer-notes">Rodapé do projeto</p>
 </footer>
 
 
@@ -11,8 +11,11 @@
   footer {
     background: #eeeeee;
     width: 100%;
-    margin: 30px auto;
-    padding: 20px;
-    max-width: 1024px;
+    padding: 20px 0;
+
+    & .footer-notes {
+      margin: 0;
+      text-align: center;
+    }
   }
 </style>
