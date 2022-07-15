@@ -38,7 +38,7 @@
 
 <style lang="scss">
   header {
-    background: #eeeeee;
+    background: #282828;
     width: 100%;
 
     & .menu-nav-header {
@@ -51,10 +51,11 @@
         text-align: center;
         transition: 0.3s;
         transition-timing-function: ease-out;
+        color: white; //hard-coded-color
         
         &:hover {
           cursor: pointer;
-          background: #dddddd;
+          background: #404040; //hard-coded-color
           transition: 0.3s;
           transition-timing-function: ease-in;
         }
@@ -62,7 +63,7 @@
         &::after {
           display:block;
           content: '';
-          border-bottom: solid 3px #019fb6;
+          border-bottom: solid 3px #BB86FC; //hard-coded-color
           transform: scaleX(0) translateY(20px);
           transition: transform 250ms ease-in-out;
         }

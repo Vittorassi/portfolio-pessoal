@@ -9,14 +9,16 @@
 </script>
 
 <Router>
-  <Header />
-
-  <div class="main-content">
-    <Route path="/" component={Home} />
-
-    <Route path="about" component={About} />
+  <div class="main-wrapper">
+    <Header />
+  
+    <div class="main-content">
+      <Route path="/" component={Home} />
+  
+      <Route path="about" component={About} />
+    </div>
+    <Footer />
   </div>
-  <Footer />
 </Router>
 
 <style lang="scss">
