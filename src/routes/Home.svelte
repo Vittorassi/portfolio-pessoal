@@ -1,7 +1,31 @@
 <script>
+  import { messageAlreadyShown } from '../stores/globals';
   import { fade } from 'svelte/transition'
 
-  let fadeMsg = "Welcome";
+  let fadeMsg = "Welcome.";
+  let countMsg = "";
+  let msgShown;
+  
+  messageAlreadyShown.subscribe((value) => {
+    msgShown = value;
+  });
+
+  /**
+  * @param {string} letter
+  */
+  function showMsg(letter) {
+    countMsg += letter;
+
+    if (countMsg === fadeMsg) {
+      stopMsg();
+    }
+
+    return letter;
+  }
+
+  function stopMsg() {
+    messageAlreadyShown.update((val) => !val);
+  }
 </script>
 
 
@@ -9,9 +33,9 @@
   <div class="head-message">
     {#each fadeMsg as char, i}
       <span
-        in:fade="{{delay: 1000 + i * 250, duration: 800}}"
+        in:fade="{{delay: !msgShown ? 1000 + i * 250 : 0, duration: !msgShown ? 800 : 0}}"
       >
-        {char}
+        {showMsg(char)}
       </span>
     {/each}
   </div>
@@ -24,7 +48,8 @@
 
     & .head-message {
       text-align: center;
-      color: white; //hard-coded-color
+      color: white; // hard-coded-color
+      font-size: 40px;
     }
   }
 </style>

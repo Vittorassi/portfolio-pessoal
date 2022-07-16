@@ -1,12 +1,15 @@
 <script>
     import { useNavigate } from 'svelte-navigator';
+    import { fade } from 'svelte/transition';
 
     const navigate = useNavigate();
 
     let activeMenu = 'home';
 </script>
 
-<header class="">
+<header
+  class="main-header"
+>
   <div class="menu-nav-header">
     
     <div
@@ -37,9 +40,13 @@
 </header>
 
 <style lang="scss">
+  @use '../scss/global.scss';
+
   header {
     background: #282828;
     width: 100%;
+    animation-name: initial_fade;
+    animation-duration: 5s;
 
     & .menu-nav-header {
       display: flex;
