@@ -24,7 +24,7 @@
   }
 
   function stopMsg() {
-    messageAlreadyShown.update((val) => !val);
+    messageAlreadyShown.update(() => true);
   }
 </script>
 
