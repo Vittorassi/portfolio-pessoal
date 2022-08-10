@@ -3,7 +3,7 @@
 
 
 <footer class="main-footer">
-  <p class="footer-notes">Todos os direitos reservados ® Otávio Vittorassi 2022</p>
+  <p class="footer-notes">® 2022 Otávio Luis Vittorassi da Silva all rights reserved</p>
 </footer>
 
 
@@ -16,7 +16,7 @@
     position: absolute;
     bottom: 0;
     animation-name: initial_fade;
-    animation-duration: 5s;
+    animation-duration: 6s;
 
     & .footer-notes {
       margin: 0;

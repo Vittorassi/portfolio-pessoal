@@ -39,3 +39,24 @@
   position: relative;
   font-family: 'Open Sans', sans-serif;
 }
+
+.text-title {
+  color: white; // hard-coded-color
+}
+
+.text-sub {
+  color: #B5B5BF; // hard-coded-color
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}

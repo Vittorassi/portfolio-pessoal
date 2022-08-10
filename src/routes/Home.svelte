@@ -1,13 +1,18 @@
 <script>
-  import { messageAlreadyShown } from '../stores/globals';
-  import { fade } from 'svelte/transition'
+  import { messageAlreadyShown, subMsgAlreadyShown } from '../stores/globals';
+  import { fade, fly } from 'svelte/transition'
 
   let fadeMsg = "Welcome.";
   let countMsg = "";
   let msgShown;
+  let subMsgShown;
   
   messageAlreadyShown.subscribe((value) => {
     msgShown = value;
+  });
+
+  subMsgAlreadyShown.subscribe((value) => {
+    subMsgShown = value;
   });
 
   /**
@@ -23,6 +28,10 @@
     return letter;
   }
 
+  function stopSubMsg() {
+    subMsgAlreadyShown.update(() => true);
+  }
+
   function stopMsg() {
     messageAlreadyShown.update(() => true);
   }
@@ -31,25 +40,79 @@
 
 <div class="home-wrap">
   <div class="head-message">
-    {#each fadeMsg as char, i}
-      <span
-        in:fade="{{delay: !msgShown ? 1000 + i * 250 : 0, duration: !msgShown ? 800 : 0}}"
+    <div class="main-message text-title">
+      {#each fadeMsg as char, i}
+        <span
+          in:fade="{{delay: !msgShown ? 1000 + i * 250 : 0, duration: !msgShown ? 800 : 0}}"
+          on:introend="{() => showMsg(char)}"
+        >
+          {char}
+        </span>
+      {/each}
+    </div>
+    {#if msgShown}
+      <div
+        in:fly="{{delay: !subMsgShown ? 500 : 0, y: -20, duration: !subMsgShown ? 800 : 0 }}"
+        class="sub-message text-sub"
       >
-        {showMsg(char)}
-      </span>
-    {/each}
+        <span
+          in:fade="{{ delay: 0, duration: !subMsgShown ? 800 : 0 }}"
+          on:introend="{() => stopSubMsg()}"
+        >
+          to the best portfolio you've ever seen!
+        </span>
+      </div>
+    {/if}
+  </div>
+  <div class="main-home-content flex items-center">
+    {#if subMsgShown}
+      <div
+        in:fade="{{delay: 550, duration: 500}}"
+        class="main-home-wrapper flex column items-center"
+      >
+        <span class="my-name text-title">
+          Otávio Vittorassi
+        </span>
+        <span class="my-description text-sub">
+          Fullstack Web Developer
+        </span>
+      </div>
+    {/if}
   </div>
 </div>
 
 
 <style lang="scss">
+  @use '../scss/global.scss';
   .home-wrap {
     margin-top: 10px;
 
     & .head-message {
       text-align: center;
-      color: white; // hard-coded-color
-      font-size: 40px;
+
+      & .main-message {
+        font-size: 30px;
+      }
+
+      & .sub-message {
+        font-size: 18px;
+      }
+    }
+
+    & .main-home-content {
+      height: 65vh;
+
+      & .main-home-wrapper {
+        width: 100%;
+
+        & .my-name {
+          font-size: 40px;
+        }
+
+        & .my-description {
+          font-size: 30px;
+        }
+      }
     }
   }
 </style>

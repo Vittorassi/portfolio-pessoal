@@ -46,7 +46,7 @@
     background: #282828;
     width: 100%;
     animation-name: initial_fade;
-    animation-duration: 5s;
+    animation-duration: 6s;
 
     & .menu-nav-header {
       display: flex;
