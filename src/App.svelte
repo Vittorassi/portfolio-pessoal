@@ -6,6 +6,7 @@
 
   import Home from './routes/Home.svelte';
   import About from './routes/About.svelte';
+  import Contacts from './routes/Contacts.svelte';
 </script>
 
 <Router>
@@ -16,6 +17,8 @@
       <Route path="/" component={Home} />
   
       <Route path="about" component={About} />
+
+      <Route path="contacts" component={Contacts} />
     </div>
     <Footer />
   </div>

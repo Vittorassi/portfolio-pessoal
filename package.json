@@ -12,11 +12,14 @@
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "coffeescript": "^2.7.0",
     "sass": "^1.53.0",
-    "svelte": "^3.44.0",
+    "svelte": "^3.49.0",
     "svelte-preprocess": "^4.10.7",
     "vite": "^2.9.9"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "svelte-fa": "^3.0.3",
     "svelte-i18n": "^3.4.0",
     "svelte-navigator": "^3.1.6"
   }
