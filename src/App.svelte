@@ -1,12 +1,22 @@
 <script>
+  import { onMount } from "svelte";
   import { Router, Route } from 'svelte-navigator';
-
+  
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
+  
+  import { routes } from "./router/routes";
 
-  import Home from './routes/Home.svelte';
-  import About from './routes/About.svelte';
-  import Contacts from './routes/Contacts.svelte';
+  import { messageAlreadyShown, subMsgAlreadyShown } from './stores/globals';
+
+  onMount(() => {
+    const url = window.location.pathname;
+
+    if (url !== '/') {
+      subMsgAlreadyShown.update(() => true);
+      messageAlreadyShown.update(() => true);
+    }
+  });
 </script>
 
 <Router>
@@ -14,19 +24,18 @@
     <Header />
   
     <div class="main-content">
-      <Route path="/" component={Home} />
-  
-      <Route path="about" component={About} />
-
-      <Route path="contacts" component={Contacts} />
+      {#each routes as route}
+        {#await route.content() then Module}
+          <Route path={route.path} component={Module} primary={false}/>
+        {/await}
+      {/each}
     </div>
+    
     <Footer />
   </div>
 </Router>
 
 <style lang="scss">
-  // Global styles shall be written in css/globals/FILE_NAME.scss
-  @use 'scss/global.scss';
   .main-content {
     width: 100%;
   }

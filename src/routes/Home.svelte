@@ -85,7 +85,7 @@
 <style lang="scss">
   @use '../scss/global.scss';
   .home-wrap {
-    margin-top: 10px;
+    padding-top: 50px;
 
     & .head-message {
       text-align: center;
