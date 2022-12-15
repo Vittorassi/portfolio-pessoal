@@ -14,7 +14,7 @@
     "sass": "^1.53.0",
     "svelte": "^3.49.0",
     "svelte-preprocess": "^4.10.7",
-    "vite": "^2.9.9"
+    "vite": "^2.9.15"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
