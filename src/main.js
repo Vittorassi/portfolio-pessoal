@@ -1,7 +1,12 @@
-import App from './App.svelte'
+import App from './App.svelte';
+import * as boot from './boot';
 
 const app = new App({
   target: document.getElementById('app')
-})
+});
 
-export default app
+setTimeout(() => {
+  boot.init();
+}, 1);
+
+export default app;
