@@ -20,7 +20,7 @@
         }
       }"
     >
-      {route.name.replace(/^\w/, (c) => c.toUpperCase())}
+      {route.name().replace(/^\w/, (c) => c.toUpperCase())}
     </div>
   {/each}
   

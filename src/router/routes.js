@@ -1,20 +1,26 @@
-import i18n from "../boot/i18n"
+import { globalRoutes } from "../stores/globals";
+
+let localRoutes = {};
+
+globalRoutes.subscribe((value) => {
+  localRoutes = value;
+});
 
 export const routes = [
   {
-    name: i18n.options.routes.HOME,
+    name: () => localRoutes.HOME,
     path: '/',
     content: async () => (await import("../routes/Home.svelte")).default,
     state: {}
   },
   {
-    name: i18n.options.routes.ABOUT,
+    name: () => localRoutes.ABOUT,
     path: '/about',
     content: async () => (await import("../routes/About.svelte")).default,
     state: {}
   },
   {
-    name: i18n.options.routes.CONTACTS,
+    name: () => localRoutes.CONTACTS,
     path: '/contacts',
     content: async () => (await import("../routes/Contacts.svelte")).default,
     state: {}

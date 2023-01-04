@@ -1,6 +1,6 @@
 import { LSGet, LSSet } from '../services/localstorage.service';
 
-import { language } from '../stores/globals';
+import { globalLanguage, globalRoutes } from '../stores/globals';
 
 import messages from '../i18n';
 
@@ -23,7 +23,8 @@ const i18n = {
     i18n.options.routes = messages[newLang].ROUTES;
 
     LSSet('lang', newLang);
-    language.update(() => newLang);
+    globalLanguage.update(() => newLang);
+    globalRoutes.update(() => messages[newLang].ROUTES);
   },
 
   init: () => {

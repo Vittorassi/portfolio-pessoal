@@ -7,11 +7,11 @@
   
   import { routes } from "./router/routes";
 
-  import { language, messageAlreadyShown, subMsgAlreadyShown } from './stores/globals';
+  import { globalLanguage, messageAlreadyShown, subMsgAlreadyShown } from './stores/globals';
 
   let currLang = 'en-US';
 
-  language.subscribe((value) => {
+  globalLanguage.subscribe((value) => {
     currLang = value;
   });
 

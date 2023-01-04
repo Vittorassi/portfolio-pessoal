@@ -9,7 +9,7 @@ export default {
 
   HOME: {
     WELCOME: 'Olá.',
-    SUB_MSG: 'Ao melhor portfólio que você já viu!',
+    SUB_MSG: 'Bem vindo ao melhor portfólio que você já viu!',
     NAME: 'Otávio Vittorassi',
     WORK: 'Desenvolvedor Web Fullstack'
   },
