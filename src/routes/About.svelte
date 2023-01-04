@@ -1,4 +1,6 @@
 <script>
+  import i18n from '../boot/i18n';
+  
   function getAge() {
     const myBirthday = new Date("2001-07-01T12:00:00");
     const today = new Date();
@@ -25,20 +27,20 @@
     </div>
     <div class="about-me-info">
       <p class="about-me-text-main text-title">
-        I've always been very passionate about how things work and what i can create with a blank canvas, and since high school i've been expressing this passion of mine through code.
+        { i18n.options.messages.ABOUT.ABOUT_ME_1 }
       </p>
       <p class="about-me-text-main text-title">
-        Today i act as a fullstack web developer, i know many things, and i'm sure as hell gonna know many more.
+        { i18n.options.messages.ABOUT.ABOUT_ME_2 }
       </p>
     </div>
   </div>
   <div class="sub-info">
     <div class="name-and-stuff">
       <p class="full-name text-title text-center">
-        Otávio Luis Vittorassi da Silva
+        { i18n.options.messages.ABOUT.FULL_NAME }
       </p>
       <p class="age text-sub text-center">
-        {getAge()} years old
+        {getAge()} { i18n.options.messages.ABOUT.YEARS }
       </p>
     </div>
   </div>

@@ -7,7 +7,13 @@
   
   import { routes } from "./router/routes";
 
-  import { messageAlreadyShown, subMsgAlreadyShown } from './stores/globals';
+  import { language, messageAlreadyShown, subMsgAlreadyShown } from './stores/globals';
+
+  let currLang = 'en-US';
+
+  language.subscribe((value) => {
+    currLang = value;
+  });
 
   onMount(() => {
     const url = window.location.pathname;
@@ -19,21 +25,24 @@
   });
 </script>
 
-<Router>
-  <div class="main-wrapper">
-    <Header />
-  
-    <div class="main-content">
-      {#each routes as route}
-        {#await route.content() then Module}
-          <Route path={route.path} component={Module} primary={false}/>
-        {/await}
-      {/each}
-    </div>
+{#key currLang}  
+  <Router>
+    <div class="main-wrapper">
+      <Header />
     
-    <Footer />
-  </div>
-</Router>
+      <div class="main-content">
+        {#each routes as route}
+          {#await route.content() then Module}
+            <Route path={route.path} component={Module} primary={false}/>
+          {/await}
+        {/each}
+      </div>
+      
+      <Footer />
+    </div>
+  </Router>
+{/key}
+
 
 <style lang="scss">
   .main-content {

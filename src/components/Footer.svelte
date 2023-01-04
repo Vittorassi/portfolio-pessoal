@@ -1,18 +1,21 @@
 <script>
-  import SMB from "./SocialMediaButton.svelte";
   import Fa from "svelte-fa/src/fa.svelte";
   import { faTwitter, faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons/index";
-  import { subMsgAlreadyShown } from "../stores/globals";
   import { fade } from "svelte/transition";
+  
+  import SMB from "./SocialMediaButton.svelte";
+  import i18n from "../boot/i18n";
+  import { subMsgAlreadyShown } from "../stores/globals";
 
   let subMsgShown;
+  let selectedLang = i18n.options.locale;
 
   subMsgAlreadyShown.subscribe((value) => {
     subMsgShown = value;
   });
 </script>
 
-{#if subMsgShown}  
+{#if subMsgShown}
   <footer
     class="main-footer"
     in:fade={{delay: 500, duration: 1200}}
@@ -20,7 +23,7 @@
     <div
       class="footer-notes text-title flex justify-center text-center">
       <p class="copyright-note">
-        ® 2022 Otávio Luis Vittorassi da Silva all rights reserved | Social media:
+        { i18n.options.messages.FOOTER.COPYRIGHT }
       </p>
       <span class="social-media-buttons flex">
         <SMB
@@ -42,6 +45,15 @@
           <Fa icon={faInstagram} slot="btn_icon" />
         </SMB>
       </span>
+    </div>
+    <div class="change-language-wrap">
+      <select bind:value={ selectedLang } on:change={() => i18n.changeLanguage(selectedLang)}>
+        {#each i18n.allowedLanguages as lang}
+          <option value={ lang }>
+            { lang }
+          </option>
+        {/each}
+      </select>
     </div>
   </footer>
 {/if}

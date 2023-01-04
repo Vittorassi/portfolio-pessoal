@@ -1,42 +1,48 @@
 import { LSGet, LSSet } from '../services/localstorage.service';
 
-import app from '../main';
+import { language } from '../stores/globals';
 
 import messages from '../i18n';
 
-const options = {
-  locale: '',
-  messages: null
-};
+const i18n = {
+  allowedLanguages: [
+    'pt-BR',
+    'en-US',
+    'es-AR',
+  ],
 
-export function changeLanguage (newLang: string) {
-  options.locale = newLang;
-  options.messages = messages[newLang];
+  options: {
+    locale: 'en-US',
+    messages: messages['en-US'],
+    routes: messages['en-US'].ROUTES
+  },
 
-  LSSet('lang', newLang);
-}
+  changeLanguage: (newLang: string) => {
+    i18n.options.locale = newLang;
+    i18n.options.messages = messages[newLang];
+    i18n.options.routes = messages[newLang].ROUTES;
 
-export function init () {
-  const POSSIBLE_LANGUAGES = {
-    pt: 'pt-BR',
-    es: 'es-AR',
-    en: 'en-US',
-    default: 'en-US',
-  };
+    LSSet('lang', newLang);
+    language.update(() => newLang);
+  },
 
-  const language = LSGet('lang') || window.navigator.language.substring(0, 5).replace('_', '-');
-
-  if (language) {
-    const languageIsAllowed = language in POSSIBLE_LANGUAGES;
-
-    if (languageIsAllowed) {
-      changeLanguage(language);
+  init: () => {
+    const language = LSGet('lang') || window.navigator.language.substring(0, 5).replace('_', '-');
+  
+    if (language) {
+      const languageIsAllowed = language in i18n.allowedLanguages;
+  
+      if (languageIsAllowed) {
+        i18n.changeLanguage(language);
+      } else {
+        i18n.changeLanguage('en-US');
+      }
     } else {
-      changeLanguage(POSSIBLE_LANGUAGES.default);
+      i18n.changeLanguage('en-US');
     }
-  } else {
-    changeLanguage(POSSIBLE_LANGUAGES.default);
   }
-
-  app.i18n = options;
 }
+
+i18n.init();
+
+export default i18n;

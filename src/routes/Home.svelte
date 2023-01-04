@@ -1,9 +1,9 @@
 <script>
   import { messageAlreadyShown, subMsgAlreadyShown } from '../stores/globals';
   import { fade, fly } from 'svelte/transition';
-  import app from '../main';
+  import i18n from '../boot/i18n';
 
-  let fadeMsg = app.i18n.messages.HOME.WELCOME;
+  let fadeMsg = i18n.options.messages.HOME.WELCOME;
   let countMsg = "";
   let msgShown;
   let subMsgShown;
@@ -60,7 +60,7 @@
           in:fade="{{ delay: 0, duration: !subMsgShown ? 800 : 0 }}"
           on:introend="{() => stopSubMsg()}"
         >
-          { app.i18n.messages.HOME.SUB_MSG }
+          { i18n.options.messages.HOME.SUB_MSG }
         </span>
       </div>
     {/if}
@@ -72,10 +72,10 @@
         class="main-home-wrapper flex column items-center"
       >
         <span class="my-name text-title">
-          { app.i18n.messages.HOME.NAME }
+          { i18n.options.messages.HOME.NAME }
         </span>
         <span class="my-description text-sub">
-          { app.i18n.messages.HOME.WORK }
+          { i18n.options.messages.HOME.WORK }
         </span>
       </div>
     {/if}
