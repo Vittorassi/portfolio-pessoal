@@ -53,7 +53,7 @@
     <div class="profile-pic-wrap">
       <img
         class="profile-pic"
-        src="src/assets/eu_mesmo.png"
+        src="/eu_mesmo.png"
         alt="Otávio Luis Vittorassi da Silva"
       >
 
