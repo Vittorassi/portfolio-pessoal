@@ -81,7 +81,7 @@ export default {
         DESCRIPTION: [
           'Minha Visita es una startup que ofrece la forma más sencilla y eficiente de gestionar las visitas comerciales a los clientes. Como desarrollador fullstack, soy responsable de desarrollar nuevas funciones y mantener las existentes para el producto estrella de la empresa, Minha Visita.',
 
-          'lorTrabajé en el desarrollo de una nueva versión del producto, utilizando las últimas tecnologías, como Vue y NestJS, y las mejores prácticas. Propuse e implementé soluciones escalables a problemas identificados con los servicios y la aplicación.em'
+          'Trabajé en el desarrollo de una nueva versión del producto, utilizando las últimas tecnologías, como Vue y NestJS, y las mejores prácticas. Propuse e implementé soluciones escalables a problemas identificados con los servicios y la aplicación.em'
         ]
       }
     }
