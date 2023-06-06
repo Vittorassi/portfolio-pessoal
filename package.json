@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@types/nodemailer": "^6.4.8",
     "coffeescript": "^2.7.0",
     "sass": "^1.53.0",
     "svelte": "^3.49.0",
@@ -19,6 +20,7 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "nodemailer": "^6.9.2",
     "svelte-fa": "^3.0.3",
     "svelte-i18n": "^3.4.0",
     "svelte-navigator": "^3.1.6"

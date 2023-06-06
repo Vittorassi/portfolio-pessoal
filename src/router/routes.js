@@ -25,4 +25,10 @@ export const routes = [
     content: async () => (await import("../routes/Contacts.svelte")).default,
     state: {}
   },
+  {
+    name: () => localRoutes.SKILLS,
+    path: '/skills',
+    content: async () => (await import("../routes/Skills.svelte")).default,
+    state: {}
+  },
 ]

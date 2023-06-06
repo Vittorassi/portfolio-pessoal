@@ -3,10 +3,10 @@
   export let btn_name = null;
 </script>
 
-{#if btn_link && btn_name}
+{#if btn_link}
   <div class="social-media-button">
     <div class="btn-wrap">
-      <a href="{btn_link}" class="text-title">
+      <a href="{btn_link}" class="text-main" target="_blank">
         <slot name="btn_icon" />
         {btn_name}
       </a>
@@ -27,6 +27,10 @@
   }
 
   .social-media-button {
-    margin-right: 10px;
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 </style>

@@ -36,12 +36,21 @@
   function stopMsg() {
     messageAlreadyShown.update(() => true);
   }
+
+  function downloadCV() {
+    const link = document.createElement('a');
+
+    link.href = '/vittorassi-otavio-cv.pdf';
+    link.download = 'vittorassi-otavio-cv.pdf';
+    link.click();
+    link.remove();
+  }
 </script>
 
 
 <div class="home-wrap">
   <div class="head-message">
-    <div class="main-message text-title">
+    <div class="main-message text-main">
       {#each fadeMsg as char, i}
         <span
           in:fade="{{delay: !msgShown ? 1000 + i * 250 : 0, duration: !msgShown ? 800 : 0}}"
@@ -71,13 +80,18 @@
         in:fade="{{delay: 550, duration: 500}}"
         class="main-home-wrapper flex column items-center"
       >
-        <span class="my-name text-title">
+        <span class="my-name text-main">
           { i18n.options.messages.HOME.NAME }
         </span>
         <span class="my-description text-sub">
           { i18n.options.messages.HOME.WORK }
         </span>
       </div>
+    {/if}
+  </div>
+  <div class="download-cv-wrap">
+    {#if subMsgShown}
+      <button in:fade="{{delay: 550, duration: 500}}" id="download-cv-btn" on:click={ () => downloadCV() }>{ i18n.options.messages.HOME.DOWNLOAD_CV }</button>
     {/if}
   </div>
 </div>
@@ -101,7 +115,7 @@
     }
 
     & .main-home-content {
-      height: 65vh;
+      height: 55vh;
 
       & .main-home-wrapper {
         width: 100%;
@@ -112,6 +126,26 @@
 
         & .my-description {
           font-size: 30px;
+        }
+      }
+    }
+
+    & .download-cv-wrap {
+      text-align: center;
+      & #download-cv-btn {
+        width: 30%;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        color: white;
+        background-color: #BB86FC;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+        border: none;
+        text-decoration: none;
+
+        &:hover {
+          transform: scale(1.05);
         }
       }
     }

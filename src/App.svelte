@@ -25,7 +25,7 @@
   });
 </script>
 
-{#key currLang}  
+{#key currLang}
   <Router>
     <div class="main-wrapper">
       <Header />
@@ -45,7 +45,14 @@
 
 
 <style lang="scss">
-  .main-content {
-    width: 100%;
+  .main-wrapper {
+    height: calc(100% - 9.5rem);
+
+    & .main-content {
+      width: 100%;
+      background-color: #181818;
+      min-height: 100%;
+      position: relative;
+    }
   }
 </style>
