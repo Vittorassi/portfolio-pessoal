@@ -14,7 +14,7 @@ export default {
 
   HOME: {
     WELCOME: 'Hello.',
-    SUB_MSG: 'Welcome to the best portfolio you\'ve ever seen!',
+    SUB_MSG: 'Welcome to my portfolio!',
     NAME: 'Otávio Vittorassi',
     WORK: 'Fullstack Web Developer',
     DOWNLOAD_CV: 'Download CV'

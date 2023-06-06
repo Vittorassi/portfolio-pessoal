@@ -14,7 +14,7 @@ export default {
 
   HOME: {
     WELCOME: 'Olá.',
-    SUB_MSG: 'Bem vindo ao melhor portfólio que você já viu!',
+    SUB_MSG: 'Bem vindo ao meu portfolio',
     NAME: 'Otávio Vittorassi',
     WORK: 'Desenvolvedor Web Fullstack',
     DOWNLOAD_CV: 'Baixar CV'
