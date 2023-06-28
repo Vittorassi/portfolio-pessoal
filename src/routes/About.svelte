@@ -124,6 +124,9 @@
       margin-top: 3rem;
       & .profile-pic-wrap {
         padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         & .profile-pic {
           height: 200px;
           width: 200px;
