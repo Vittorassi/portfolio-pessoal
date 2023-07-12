@@ -28,8 +28,8 @@ export default {
 
     CAREER: {
       CIMOL: {
-        TITLE: 'Student at <b>CIMOL<b>',
-        FROM_TO: 'from january 2017 to  december 2019',
+        TITLE: 'Estudante no <b>CIMOL<b>',
+        FROM_TO: 'de janeiro de 2017 até dezembro de 2019',
         DESCRIPTION: [
           'O CIMOL é uma escola técnica que oferece uma variedade de cursos em áreas como de informática, design e eletrônica.',
 
@@ -40,8 +40,8 @@ export default {
       },
 
       ESTACIO: {
-        TITLE: 'Student at <b>Estácio<b>',
-        FROM_TO: 'from january 2021 until now',
+        TITLE: 'Estudante na <b>Estácio<b>',
+        FROM_TO: 'de janeiro de 2021 até hoje',
         DESCRIPTION: [
           'Estácio é uma escola de ensino superior e educação à distância sobre as mais diversas áreas.',
 
@@ -52,8 +52,8 @@ export default {
       },
 
       GIGA_NET: {
-        TITLE: 'Customer Support at <b>Giga Net<b>',
-        FROM_TO: 'from january 2020 to august 2020',
+        TITLE: 'Suporte ao Consumidor na <b>Giga Net<b>',
+        FROM_TO: 'de janeiro de 2020 até agosto de 2020',
         DESCRIPTION: [
           'Giga Net é um provedor de internet situado na região do vale do paranhana e rio dos sinos no estado do Rio Grande so Sul, Brasil.',
 
@@ -64,8 +64,8 @@ export default {
       },
 
       W2A: {
-        TITLE: 'Fullstack Web Developer at <b>W2A Brasil LTDA<b>',
-        FROM_TO: 'from august 2020 to march 2021',
+        TITLE: 'Desenvolvedor Web Fullstack na <b>W2A Brasil LTDA<b>',
+        FROM_TO: 'de agosto de 2020 até março de 2021',
         DESCRIPTION: [
           'W2A Brasil é uma software house cujo desenvolvimento é focado em soluções inteligentes para empresas do varejo.',
 
@@ -76,8 +76,8 @@ export default {
       },
 
       MINHA_VISITA: {
-        TITLE: 'Fullstack Web Developer at <b>Minha Visita LTDA<b>',
-        FROM_TO: 'october 2021 to january 2023',
+        TITLE: 'Desenvolvedor Web Fullstack na <b>Minha Visita LTDA<b>',
+        FROM_TO: 'de outubro de 2021 até janeiro de 2023',
         DESCRIPTION: [
           'Minha Visita é uma startup que oferece a maneira mais simples e eficiente de gerenciar visitas comerciais aos clientes. Como desenvolvedor fullstack, sou responsável pelo desenvolvimento de novos recursos e pela manutenção dos existentes para o produto principal da empresa, o Minha Visita.',
 

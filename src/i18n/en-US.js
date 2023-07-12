@@ -77,7 +77,7 @@ export default {
 
       MINHA_VISITA: {
         TITLE: 'Fullstack Web Developer at <b>Minha Visita LTDA<b>',
-        FROM_TO: 'october 2021 to january 2023',
+        FROM_TO: 'from october 2021 to january 2023',
         DESCRIPTION: [
           'Minha Visita is a startup that offers the simplest and most efficient way to manage commercial visits to customers. As a fullstack developer, I was responsible for developing new features and maintaining existing ones for the company\'s flagship product, Minha Visita.',
 

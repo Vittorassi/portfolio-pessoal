@@ -101,4 +101,15 @@
       }
     }
   }
+
+  @media only screen and (max-width: 426px) {
+    .footer-notes {
+      flex-direction: column !important;
+      gap: 1rem;
+
+      & .social-media-buttons {
+        padding-bottom: 1rem;
+      }
+    }
+  }
 </style>

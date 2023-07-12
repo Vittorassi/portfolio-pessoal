@@ -100,7 +100,7 @@
 <style lang="scss">
   @use '../scss/global.scss';
   .home-wrap {
-    padding-top: 50px;
+    padding-top: 3rem;
 
     & .head-message {
       text-align: center;
@@ -115,7 +115,7 @@
     }
 
     & .main-home-content {
-      height: 55vh;
+      height: 45vh;
 
       & .main-home-wrapper {
         width: 100%;
@@ -132,6 +132,7 @@
 
     & .download-cv-wrap {
       text-align: center;
+      padding-bottom: 3rem;
       & #download-cv-btn {
         width: 30%;
         text-align: center;
@@ -148,6 +149,12 @@
           transform: scale(1.05);
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 426px) {
+    #download-cv-btn {
+      width: 70% !important;
     }
   }
 </style>

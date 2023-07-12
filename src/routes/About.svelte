@@ -228,4 +228,59 @@
       }
     }
   }
+
+  @media only screen and (max-width: 426px) {
+    .main-info {
+      flex-direction: column;
+    }
+
+    .profile-pic-wrap {
+      padding-right: 0 !important;
+    }
+
+    .career-main {
+      flex-direction: column !important;
+      gap: 3rem !important;
+
+      & .career-menu {
+        flex-direction: row !important;
+        height: 44px !important;
+        width: auto !important;
+
+        & .career-option {
+          width: 20% !important;
+          text-align: center !important;
+          height: 100% !important;
+          padding: 0.5rem 0 0.5rem 0 !important;
+
+          &::after {
+            width: 100% !important;
+            height: 3px !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            transform: scaleX(0) !important;
+          }
+
+          &.active{
+            &:after {
+              transform: scaleX(1) !important;
+            }
+          }
+        }
+      }
+
+      & .career-text {
+        width: auto !important;
+        align-items: center !important;
+
+        & .title {
+          text-align: center !important;
+        }
+
+        & .from-to {
+          text-align: center !important;
+        }
+      }
+    }
+  }
 </style>

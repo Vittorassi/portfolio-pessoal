@@ -28,8 +28,8 @@ export default {
 
     CAREER: {
       CIMOL: {
-        TITLE: 'Student at <b>CIMOL<b>',
-        FROM_TO: 'from january 2017 to  december 2019',
+        TITLE: 'Alumno en <b>CIMOL<b>',
+        FROM_TO: 'de enero 2017 a diciembre 2019',
         DESCRIPTION: [
           'CIMOL es una escuela técnica que ofrece una variedad de cursos en áreas como informática, diseño y electrónica.',
 
@@ -40,8 +40,8 @@ export default {
       },
 
       ESTACIO: {
-        TITLE: 'Student at <b>Estácio<b>',
-        FROM_TO: 'from january 2021 until now',
+        TITLE: 'Alumno en <b>Estácio<b>',
+        FROM_TO: 'de enero 2021 hasta ahora',
         DESCRIPTION: [
           'Estácio es una escuela de educación superior y educación a distancia en las más diversas áreas.',
 
@@ -52,8 +52,8 @@ export default {
       },
 
       GIGA_NET: {
-        TITLE: 'Customer Support at <b>Giga Net<b>',
-        FROM_TO: 'from january 2020 to august 2020',
+        TITLE: 'Atención al cliente en <b>Giga Net<b>',
+        FROM_TO: 'de enero 2020 a agosto 2020',
         DESCRIPTION: [
           'Giga Net es un proveedor de internet ubicado en la región de Vale do Paranhana y Rio dos Sinos en el estado de Rio Grande do Sul, Brasil.',
 
@@ -64,8 +64,8 @@ export default {
       },
 
       W2A: {
-        TITLE: 'Fullstack Web Developer at <b>W2A Brasil LTDA<b>',
-        FROM_TO: 'from august 2020 to march 2021',
+        TITLE: 'Desarrollador web Fullstack en <b>W2A Brasil LTDA<b>',
+        FROM_TO: 'de agosto 2020 a marzo 2021',
         DESCRIPTION: [
           'W2A Brasil es una casa de software cuyo desarrollo se centra en soluciones inteligentes para empresas minoristas.',
           
@@ -76,8 +76,8 @@ export default {
       },
 
       MINHA_VISITA: {
-        TITLE: 'Fullstack Web Developer at <b>Minha Visita LTDA<b>',
-        FROM_TO: 'october 2021 to january 2023',
+        TITLE: 'Desarrollador web Fullstack en <b>Minha Visita LTDA<b>',
+        FROM_TO: 'de octubre 2021 a enero 2023',
         DESCRIPTION: [
           'Minha Visita es una startup que ofrece la forma más sencilla y eficiente de gestionar las visitas comerciales a los clientes. Como desarrollador fullstack, soy responsable de desarrollar nuevas funciones y mantener las existentes para el producto estrella de la empresa, Minha Visita.',
 
